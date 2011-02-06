@@ -1,10 +1,8 @@
 from django.conf.urls.defaults import *
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
-
 urlpatterns = patterns('',
+    (r'^catalog/', include('listentome.catalog.urls')),
+    (r'^library/', include('listentome.library.urls')),
     # Example:
     # (r'^listentome/', include('listentome.foo.urls')),
 
