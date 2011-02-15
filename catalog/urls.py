@@ -8,6 +8,10 @@ urlpatterns = patterns('listentome.catalog.views',
     
     (r'^record/add/$', 'create_record'),
 
+    (r'^ajax/autocomplete/$', 'ajax_autocomplete'),
     (r'^ajax/performer/add/$', 'ajax_create_performer'),
-    (r'^ajax/piece/add/$'
+    (r'^ajax/piece/add/$', 'ajax_create_piece'),
+    (r'^ajax/component/add/$', 'ajax_create_component'),
+    (r'^ajax/composer/add/$', 'ajax_create_composer'),
+
 )
