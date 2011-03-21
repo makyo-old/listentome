@@ -2,7 +2,7 @@ from django.conf.urls.defaults import *
 
 urlpatterns = patterns('',
     (r'^catalog/', include('listentome.catalog.urls')),
-    (r'^library/', include('listentome.library.urls')),
+    (r'^circulation/', include('listentome.circulation.urls')),
     (r'^accounts/', include('listentome.usermgmt.urls')),
     # Example:
     # (r'^listentome/', include('listentome.foo.urls')),

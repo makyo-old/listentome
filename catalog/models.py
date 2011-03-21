@@ -13,7 +13,7 @@ class Record(models.Model):
     title = models.CharField(max_length = 500)
     kind = models.CharField(max_length = 20)
     status = models.CharField(max_length = 1, choices = status_choices)
-    performers = models.ManyToManyField('Performer')
+    performers = models.ManyToManyField('Performer', null = True)
 
 class Performer(models.Model):
     name = models.CharField(max_length = 200)
