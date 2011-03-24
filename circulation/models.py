@@ -13,5 +13,6 @@ class ReserveRecord(models.Model):
     record = models.ForeignKey(Record)
     reserved_by = models.ForeignKey(User, related_name = 'records_reserved_by')
     reserved_for = models.ForeignKey(User, related_name = 'records_reserved_for')
+    available_to = models.CharField(max_length = 500, blank = True)
     date_reserved = models.DateField(auto_now_add = True)
     date_expires = models.DateField()

@@ -15,9 +15,15 @@ class Record(models.Model):
     status = models.CharField(max_length = 1, choices = status_choices)
     performers = models.ManyToManyField('Performer', null = True)
 
+    def get_absolute_url(self):
+        return "/catalog/record/%s/" % self.id
+
 class Performer(models.Model):
     name = models.CharField(max_length = 200)
     title = models.CharField(max_length = 50, blank = True)
+
+    def get_absolute_url(self):
+        return "/catalog/performer/%s/" % self.id
 
 class Piece(models.Model):
     title = models.CharField(max_length = 500)
@@ -33,6 +39,7 @@ class Composer(models.Model):
 class Movement(models.Model):
     piece = models.ForeignKey('Piece')
     title = models.CharField(max_length = 200)
+    movement_number = models.IntegerField()
 
 class Component(models.Model):
     track_page_number = models.IntegerField(null = True)

@@ -10,10 +10,18 @@ class PerformerForm(forms.ModelForm):
     class Meta:
         model = Performer
 
+class ComposerForm(forms.ModelForm):
+    class Meta:
+        model = Composer
+
 class PieceForm(forms.ModelForm):
     class Meta:
         model = Piece
 
-class MovementForm(forms.ModelForm);
+class MovementForm(forms.ModelForm):
     class Meta:
         model = Movement
+
+class ComponentForm(forms.ModelForm):
+    class Meta:
+        model = Component
